@@ -33,7 +33,7 @@ export default function MediScanPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [isScanning, setIsScanning] = useState(false);
-  const [scanResult, setScanResult] = useState<{ success: boolean; medicine?: MedicineData; error?: string } | null>(null);
+  const [scanResult, setScanResult] = useState<{ success: boolean; medicine?: MedicineData; error?: string; note?: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   

@@ -4,14 +4,7 @@ const config: CapacitorConfig = {
   appName: 'nirogya',
   webDir: 'out',
   server: {
-    // Load the app from your Vercel deployment
-    // This way the app runs from Vercel (with working API routes)
-    // but still has access to native features through Capacitor
-    url: 'https://m-app-livid.vercel.app',
-    androidScheme: 'https',
-    iosScheme: 'https',
-    // Allow cleartext for development (remove in production)
-    cleartext: false,
+    androidScheme: 'https'
   },
   plugins: {
     SplashScreen: {
