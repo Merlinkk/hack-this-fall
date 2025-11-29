@@ -231,11 +231,13 @@ function needsTools(message) {
 function getMinimalTools() {
   return [
     // Only essential tools that might be needed in conversation
-    getPatientProfileTool,   // For context
+    getPatientProfileTool,    // For context
     updatePatientProfileTool, // For name updates
-    getRemindersTool,        // For \"what are my reminders\" style queries
-    webSearchTool,           // For general questions
-    medicalKnowledgeTool     // For health questions
+    createReminderTool,       // For \"set a reminder\" style queries
+    getRemindersTool,         // For \"what are my reminders\" style queries
+    cancelReminderTool,       // For \"cancel my reminder\" queries
+    webSearchTool,            // For general questions
+    medicalKnowledgeTool      // For health questions
   ];
 }
 
