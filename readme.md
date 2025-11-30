@@ -72,6 +72,72 @@ Modern **mobile/web app** with AI-powered features for smartphone users.
 - Vision model
 - MongoDB
 
+# Lingo.dev Integration
+
+## Overview
+
+**Lingo.dev** is an AI-powered translation service that enables real-time, multilingual support across the entire Nirogya AI application. It provides seamless translation capabilities without requiring manual translation files or pre-translated content.
+
+## Why Lingo.dev?
+
+### 1. **Healthcare Accessibility**
+Nirogya AI serves diverse populations across India and globally. Lingo.dev enables the app to support **11 languages** including:
+- **Indian Languages**: Hindi, Marathi, Tamil, Telugu, Bengali, Kannada, Gujarati, Odia
+- **International**: English, French, Spanish
+
+This ensures that users can access health information and AI-powered consultations in their native language, breaking down language barriers in healthcare.
+
+### 2. **Real-Time Translation**
+Unlike traditional i18n solutions that require pre-translated strings, Lingo.dev provides:
+- **On-the-fly translation** - Content translates instantly when users switch languages
+- **No translation files needed** - No need to maintain separate translation JSON files
+- **AI-powered accuracy** - Uses advanced AI models for context-aware translations
+
+### 3. **Developer Experience**
+- **Simple API** - Just wrap text with `useTranslatedText('Your text')` hook
+- **Automatic caching** - Translations are cached to reduce API calls and improve performance
+- **Type-safe** - Full TypeScript support with language code types
+
+## Architecture
+
+### Server-Side Processing
+Lingo.dev SDK runs **server-side only** via Next.js API routes to:
+- Avoid browser compatibility issues
+- Keep API keys secure (never exposed to client)
+- Optimize performance with server-side processing
+
+### Client-Side Integration
+- **React Context** (`TranslationContext`) manages app-wide language state
+- **Custom Hooks** (`useTranslatedText`) provide simple translation API
+- **Language Switcher** component for user-friendly language selection
+- **Automatic URL routing** - URLs update to include language code (e.g., `/en/home`, `/hi/home`)
+
+## Key Features
+
+### 1. **Instant Language Switching**
+Users can switch languages at any time without page reload. All UI text updates instantly:
+- Page titles and headers
+- Button labels
+- Form placeholders
+- Error messages
+- Navigation items
+
+### 2. **Smart Caching**
+- Translations are automatically cached to reduce API calls
+- Cache persists across page navigations
+- Cache clears when language changes
+
+### 3. **Language Persistence**
+- User's language preference saved to localStorage
+- Automatically restored on app reload
+- Syncs with URL routing for shareable language-specific links
+
+### 4. **Auto-Detection**
+Optional auto-detection feature can identify source language automatically, useful for:
+- User-generated content
+- Dynamic text from APIs
+- Mixed-language scenarios
+
 #### Multilingual Video Calls
 <img width="1280" height="681" alt="image" src="https://github.com/user-attachments/assets/1ba7d9c8-e53a-4578-9f5f-7a63f7890324" />
 
