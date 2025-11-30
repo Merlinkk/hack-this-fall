@@ -245,9 +245,7 @@ Scenario: **Patient (Hindi/Punjabi)** + **Doctor (English/Kannada)** on video ca
 
 ## Screenshots
 
-https://drive.google.com/file/d/1RFm8fMxTzeESHpsGXYSjSmbP_ZtXaQ_Q/view?usp=sharing
 
-https://www.youtube.com/embed/ffu7DFClbbc?si=9z06KhIf8Pjp5BZf
 
 https://github.com/user-attachments/assets/007ff21f-94a9-4ea2-8955-e9cb21841915
 <img width="470" height="899" alt="image" src="https://github.com/user-attachments/assets/4285f818-c302-49ec-8bc6-c518a1fae634" />
@@ -255,6 +253,8 @@ https://github.com/user-attachments/assets/007ff21f-94a9-4ea2-8955-e9cb21841915
 <img width="470" height="899" alt="image" src="https://github.com/user-attachments/assets/5101fcf3-6193-4929-82e1-6592c0c03388" />
 <img width="470" height="899" alt="image" src="https://github.com/user-attachments/assets/b1204c4a-2ce4-48e0-8595-4ed3d18ff3ce" />
 
+![WhatsApp Image 2025-11-29 at 10 43 23_685f674c](https://github.com/user-attachments/assets/32aa483a-ea8a-4c59-96eb-327fd30c066c)
+![WhatsApp Image 2025-11-29 at 10 24 32_7a1287f9](https://github.com/user-attachments/assets/b7e68e8e-b468-4073-8a17-d8e99b20c72d)
 
 
 ![WhatsApp Image 2025-11-29 at 10 59 24](https://github.com/user-attachments/assets/ceac32f8-f42e-4170-853c-961f74035622)
@@ -270,6 +270,8 @@ https://github.com/user-attachments/assets/007ff21f-94a9-4ea2-8955-e9cb21841915
 ![WhatsApp Image 2025-11-29 at 10 57 54](https://github.com/user-attachments/assets/99f6f0d2-d4b7-4b97-a41d-0b6042321de6)
 ![WhatsApp Image 2025-11-29 at 10 58 01](https://github.com/user-attachments/assets/2872f21d-5ca9-4d0a-a4df-5e8f4a4b5b11)
 ![WhatsApp Image 2025-11-29 at 10 58 07](https://github.com/user-attachments/assets/7e0381c9-ea9e-476b-a391-3db8747ef6fb)
+
+
 
 
 
