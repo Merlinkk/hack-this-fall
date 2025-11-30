@@ -4,6 +4,13 @@ Nirogya AI is an **agentic healthcare platform for India** that works across rur
 
 ---
 
+## Youtube demo
+
+https://youtu.be/hXTCs2PM1Ug
+
+
+---
+
 ## Core Modules
 
 ### 1. `Rural_Agent.js` – Call-Based AI Health Agent
