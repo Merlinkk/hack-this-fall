@@ -6,10 +6,10 @@ Nirogya AI is an **agentic healthcare platform for India** that works across rur
 
 ## Project Links :-
 
-- **Youtube Demo**: https://youtu.be/hXTCs2PM1Ug
-- **Doctor Dashbord**: https://m-app-3c9u.vercel.app/
-- **Main Application**: m-app-livid.vercel.app
-- **Video Calling App**: https://nirogyaa.vercel.app/
+- [Youtube Demo](https://youtu.be/hXTCs2PM1Ug)
+- [Doctor Dashbord](https://m-app-3c9u.vercel.app/)
+- [Main Application](https://m-app-livid.vercel.app/)
+- [Video Calling App](https://nirogyaa.vercel.app/)
   
 
 
