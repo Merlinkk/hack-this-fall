@@ -3,15 +3,28 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Heart, Footprints, Apple, Droplet } from 'lucide-react';
+import { useTranslatedText } from '@/hooks/useTranslatedText';
 
-const metrics = [
-  { icon: Heart, label: 'Heart Rate', value: '97 bpm', color: 'text-red-500', bgColor: 'bg-red-500/10' },
-  { icon: Footprints, label: 'Steps', value: '1875', color: 'text-foreground', bgColor: 'bg-muted' },
-  { icon: Apple, label: 'Nutrition', value: '120 mcg', color: 'text-purple-500', bgColor: 'bg-purple-500/10' },
-  { icon: Droplet, label: 'Hydration', value: '258 ml', color: 'text-blue-500', bgColor: 'bg-blue-500/10' },
+const metricKeys = [
+  { key: 'Heart Rate', icon: Heart, value: '97 bpm', color: 'text-red-500', bgColor: 'bg-red-500/10' },
+  { key: 'Steps', icon: Footprints, value: '1875', color: 'text-foreground', bgColor: 'bg-muted' },
+  { key: 'Nutrition', icon: Apple, value: '120 mcg', color: 'text-purple-500', bgColor: 'bg-purple-500/10' },
+  { key: 'Hydration', icon: Droplet, value: '258 ml', color: 'text-blue-500', bgColor: 'bg-blue-500/10' },
 ];
 
 export function HealthMetrics() {
+  // Translate all labels
+  const heartRate = useTranslatedText('Heart Rate');
+  const steps = useTranslatedText('Steps');
+  const nutrition = useTranslatedText('Nutrition');
+  const hydration = useTranslatedText('Hydration');
+  
+  const metrics = [
+    { ...metricKeys[0], label: heartRate },
+    { ...metricKeys[1], label: steps },
+    { ...metricKeys[2], label: nutrition },
+    { ...metricKeys[3], label: hydration },
+  ];
   return (
     <div className="grid grid-cols-2 gap-4">
       {metrics.map((metric, index) => {

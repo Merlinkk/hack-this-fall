@@ -5,18 +5,20 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Home, BarChart3, MessageCircle, FileText, User, Pill } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLocalizedLink } from '@/hooks/useLocalizedLink';
 
 const navItems = [
-  { href: '/home', icon: Home, label: 'Home' },
-  { href: '/analytics', icon: BarChart3, label: 'Analytics' },
-  { href: '/chat', icon: MessageCircle, label: 'Chat' },
-  { href: '/mediscan', icon: Pill, label: 'MediScan' },
-  { href: '/records', icon: FileText, label: 'Records' },
-  { href: '/profile', icon: User, label: 'Profile' },
+  { path: 'home', icon: Home, label: 'Home' },
+  { path: 'analytics', icon: BarChart3, label: 'Analytics' },
+  { path: 'chat', icon: MessageCircle, label: 'Chat' },
+  { path: 'mediscan', icon: Pill, label: 'MediScan' },
+  { path: 'records', icon: FileText, label: 'Records' },
+  { path: 'profile', icon: User, label: 'Profile' },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
+  const getLocalizedLink = useLocalizedLink;
 
   return (
     <nav 
@@ -28,13 +30,14 @@ export function BottomNav() {
     >
       <div className="flex items-center justify-around h-20 px-2">
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
+          const href = getLocalizedLink(`/${item.path}`);
+          const isActive = pathname === href || pathname?.endsWith(`/${item.path}`);
           const Icon = item.icon;
 
           return (
             <Link
-              key={item.href}
-              href={item.href}
+              key={item.path}
+              href={href}
               className={cn(
                 'flex flex-col items-center justify-center flex-1 h-full relative',
                 'transition-all duration-300'

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CapacitorProvider } from './CapacitorProvider';
 import { PermissionsProvider } from '@/contexts/PermissionsContext';
+import { TranslationProvider } from '@/contexts/TranslationContext';
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -40,7 +41,9 @@ export default function RootLayout({
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-x-hidden`}>
 				<CapacitorProvider>
 					<PermissionsProvider>
-					{children}
+						<TranslationProvider>
+							{children}
+						</TranslationProvider>
 					</PermissionsProvider>
 				</CapacitorProvider>
 			</body>

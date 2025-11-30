@@ -5,8 +5,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Brain, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslatedText } from '@/hooks/useTranslatedText';
+import { useLocalizedLink } from '@/hooks/useLocalizedLink';
 
 export function AIDiagnosisCard() {
+  const aiDiagnosis = useTranslatedText('AI Diagnosis');
+  const aiDescription = useTranslatedText('Get instant health insights with our AI-powered assessment. Describe your symptoms and get preliminary guidance through voice conversation.');
+  const startAIAssessment = useTranslatedText('Start AI Assessment');
+  const getLocalizedLink = useLocalizedLink;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,7 +49,7 @@ export function AIDiagnosisCard() {
             </motion.div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-2xl font-extrabold text-white">AI Diagnosis</h3>
+                <h3 className="text-2xl font-extrabold text-white">{aiDiagnosis}</h3>
                 <motion.div
                   animate={{ opacity: [1, 0.5, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -51,16 +58,16 @@ export function AIDiagnosisCard() {
                 </motion.div>
               </div>
               <p className="text-sm text-white/90 leading-relaxed">
-                Get instant health insights with our AI-powered assessment. Describe your symptoms and get preliminary guidance through voice conversation.
+                {aiDescription}
               </p>
             </div>
           </div>
-          <Link href="/ai-diagnosis">
+          <Link href={getLocalizedLink('/ai-diagnosis')}>
             <Button
               variant="secondary"
               className="w-full bg-white text-[#5A8A12] hover:bg-gray-50 h-12 text-base font-extrabold rounded-xl shadow-lg"
             >
-              Start AI Assessment
+              {startAIAssessment}
             </Button>
           </Link>
         </div>

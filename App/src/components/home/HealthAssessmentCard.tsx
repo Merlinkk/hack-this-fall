@@ -5,8 +5,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ClipboardCheck, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslatedText } from '@/hooks/useTranslatedText';
+import { useLocalizedLink } from '@/hooks/useLocalizedLink';
 
 export function HealthAssessmentCard() {
+  const healthAssessment = useTranslatedText('Health Assessment');
+  const assessmentDescription = useTranslatedText('Complete your health assessment to get personalized insights and recommendations.');
+  const startAssessment = useTranslatedText('Start Assessment');
+  const getLocalizedLink = useLocalizedLink;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -28,13 +35,13 @@ export function HealthAssessmentCard() {
             <ClipboardCheck className="w-6 h-6 text-white" />
           </div>
           <div className="flex-1">
-            <h3 className="font-extrabold text-lg mb-1 text-gray-900">Health Assessment</h3>
+            <h3 className="font-extrabold text-lg mb-1 text-gray-900">{healthAssessment}</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              Complete your health assessment to get personalized insights and recommendations.
+              {assessmentDescription}
             </p>
-            <Link href="/assessment">
+            <Link href={getLocalizedLink('/assessment')}>
               <Button className="w-full bg-[#83C818] hover:bg-[#6BA014] text-white h-12 text-base font-bold rounded-xl shadow-lg">
-                Start Assessment
+                {startAssessment}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
